@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Runner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="title-strip">
+      <p class="eyebrow">Hack Club Bank Project</p>
+      <h1>Bank Runner</h1>
+      <p class="subtitle">A tiny rooftop parkour game with a stick figure, quick restarts, and shiny coins to chase.</p>
+    </section>
+
+    <section class="hud">
+      <div>
+        <p class="label">Distance</p>
+        <p class="value" id="score">0 m</p>
+      </div>
+      <div>
+        <p class="label">Best</p>
+        <p class="value" id="best">0 m</p>
+      </div>
+      <div>
+        <p class="label">Streak</p>
+        <p class="value" id="state">x1</p>
+      </div>
+    </section>
+
+    <section class="stage-wrap">
+      <canvas id="game" width="960" height="540" aria-label="Stick figure parkour game"></canvas>
+
+      <div class="overlay" id="overlay">
+        <h2>Bank Runner</h2>
+        <p>Dash across rooftops, grab coins, jump gaps, and slide under blockers. It is simple on purpose, but it gets fast fast.</p>
+        <ul>
+          <li><span>Jump</span><strong>Space / W / Up</strong></li>
+          <li><span>Slide</span><strong>S / Down</strong></li>
+          <li><span>Restart</span><strong>R</strong></li>
+        </ul>
+        <button id="startButton">Start Run</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
